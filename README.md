@@ -11,4 +11,5 @@ The game can be played in [Itch.io](https://thalitacolofatti.itch.io/mini-crazy-
 
 We used art by [Pixel Frog](https://pixelfrog-assets.itch.io/tiny-swords)
 and [Kenney's Particle pack](https://kenney.nl/assets/particle-pack)
+
 The instructor repository: [Rafa Skoberg - DIO](https://github.com/digitalinnovationone/trilha-godot/tree/main)
