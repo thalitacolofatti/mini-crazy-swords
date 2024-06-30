@@ -1,2 +1,12 @@
-# mini-crazy-swords
-This is a game developed in DIO classes
+# Mini Crazy Swords
+This is a game developed in DIO bootcamp Santander 2024 - Criando Jogos com Godot
+
+I followed all the instructions and I changed the following:
+ - HP bar showed with the UI, not with the player
+ - random damage by the enemies 
+
+The game can be played in [Itch.io](https://thalitacolofatti.itch.io/mini-crazy-swords)
+
+We used art by [Pixel Frog](https://pixelfrog-assets.itch.io/tiny-swords)
+and [Kenney's Particle pack](https://kenney.nl/assets/particle-pack)
+The instructor repository: [Rafa Skoberg - DIO](https://github.com/digitalinnovationone/trilha-godot/tree/main)
