@@ -1,0 +1,182 @@
+[gd_scene load_steps=17 format=3 uid="uid://bef12xyj5rapn"]
+
+[ext_resource type="Texture2D" uid="uid://6q8ib5kq0m67" path="res://addons/Tiny Swords/UI/Banners/Banner_Horizontal.png" id="1_6jxfj"]
+[ext_resource type="Script" path="res://ui/game_ui.gd" id="1_xt7yv"]
+[ext_resource type="Texture2D" uid="uid://ljv8tyi78qtj" path="res://addons/Tiny Swords/UI/Banners/Carved_Regular.png" id="2_dkitb"]
+[ext_resource type="Texture2D" uid="uid://ctpshj14riae6" path="res://addons/Tiny Swords/Resources/Resources/M_Idle_(NoShadow).png" id="3_aqhq7"]
+[ext_resource type="Texture2D" uid="uid://dvt7n7kqiv1hy" path="res://addons/Tiny Swords/UI/Banners/Carved_3Slides.png" id="4_2uynv"]
+[ext_resource type="Texture2D" uid="uid://d3gq8pa56r5wv" path="res://addons/Tiny Swords/Factions/Knights/Troops/Warrior/Red/Warrior_Red_front_static.png" id="5_7awkt"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_tkhqp"]
+texture = ExtResource("2_dkitb")
+axis_stretch_vertical = 2
+modulate_color = Color(1, 0.909804, 1, 1)
+
+[sub_resource type="SystemFont" id="SystemFont_qp7xc"]
+font_names = PackedStringArray("Calisto MT")
+font_weight = 999
+multichannel_signed_distance_field = true
+
+[sub_resource type="LabelSettings" id="LabelSettings_4ljlo"]
+font = SubResource("SystemFont_qp7xc")
+font_size = 32
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1gd1o"]
+texture = ExtResource("1_6jxfj")
+texture_margin_left = 32.0
+texture_margin_top = 16.0
+texture_margin_right = 32.0
+texture_margin_bottom = 48.0
+axis_stretch_horizontal = 2
+axis_stretch_vertical = 2
+region_rect = Rect2(32, 48, 128, 128)
+modulate_color = Color(1, 0.909804, 1, 1)
+
+[sub_resource type="SystemFont" id="SystemFont_4l7r0"]
+font_names = PackedStringArray("Circus Manerus")
+font_weight = 999
+multichannel_signed_distance_field = true
+
+[sub_resource type="LabelSettings" id="LabelSettings_otpeu"]
+font = SubResource("SystemFont_4l7r0")
+font_size = 26
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mpebf"]
+atlas = ExtResource("3_aqhq7")
+region = Rect2(40, 48, 56, 56)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_abrh1"]
+texture = ExtResource("4_2uynv")
+axis_stretch_vertical = 2
+modulate_color = Color(1, 0.909804, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_15vkl"]
+bg_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+corner_detail = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xkq05"]
+bg_color = Color(0.952941, 0.00392157, 0.0392157, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+corner_detail = 10
+
+[node name="GameUI" type="CanvasLayer"]
+script = ExtResource("1_xt7yv")
+
+[node name="TimerPanel" type="Panel" parent="."]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -66.0
+offset_top = 15.0
+offset_right = 67.0
+offset_bottom = 73.0
+grow_horizontal = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_tkhqp")
+
+[node name="TimerLabel" type="Label" parent="TimerPanel"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -38.5
+offset_top = -14.0
+offset_right = 38.5
+offset_bottom = 22.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "08:50"
+label_settings = SubResource("LabelSettings_4ljlo")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MeatPanel" type="Panel" parent="."]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -153.0
+offset_top = 10.0
+offset_right = -10.0
+offset_bottom = 86.0
+grow_horizontal = 0
+theme_override_styles/panel = SubResource("StyleBoxTexture_1gd1o")
+
+[node name="MeatLabel" type="Label" parent="MeatPanel"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 0.5
+offset_top = -28.0
+offset_right = 47.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "50"
+label_settings = SubResource("LabelSettings_otpeu")
+horizontal_alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="MeatPanel"]
+layout_mode = 0
+offset_left = 33.0
+offset_top = 2.0
+offset_right = 161.0
+offset_bottom = 130.0
+scale = Vector2(0.3, 0.3)
+texture = SubResource("AtlasTexture_mpebf")
+
+[node name="HealthPanel" type="Panel" parent="."]
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 197.0
+offset_bottom = 72.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_abrh1")
+
+[node name="TextureRect" type="TextureRect" parent="HealthPanel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -80.5
+offset_top = -26.0
+offset_right = -30.5
+offset_bottom = 24.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("5_7awkt")
+expand_mode = 1
+
+[node name="HealthProgressBar" type="ProgressBar" parent="HealthPanel"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -25.5
+offset_top = -8.0
+offset_right = 75.5
+offset_bottom = 9.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/background = SubResource("StyleBoxFlat_15vkl")
+theme_override_styles/fill = SubResource("StyleBoxFlat_xkq05")
+value = 100.0
+rounded = true
+show_percentage = false

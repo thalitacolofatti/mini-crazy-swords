@@ -1,0 +1,49 @@
+[gd_scene load_steps=10 format=3 uid="uid://dvotdpujmy0o1"]
+
+[ext_resource type="Texture2D" uid="uid://dvmr4qkr8fac8" path="res://addons/Tiny Swords/Factions/Knights/Troops/Warrior/Red/Warrior_Red.png" id="1_gslci"]
+[ext_resource type="Texture2D" uid="uid://cuw587yr6g3y6" path="res://addons/Tiny Swords/Factions/Knights/Troops/Pawn/Blue/Pawn_Blue.png" id="2_8cepk"]
+[ext_resource type="Texture2D" uid="uid://bkqybbdg5cyl1" path="res://addons/Tiny Swords/Resources/Resources/G_Spawn.png" id="3_0ieln"]
+[ext_resource type="Texture2D" uid="uid://dx82yxl5t1s3h" path="res://addons/Tiny Swords/Resources/Resources/M_Spawn.png" id="4_x78yx"]
+[ext_resource type="Texture2D" uid="uid://4ntwebtqkrvg" path="res://addons/Tiny Swords/Resources/Resources/W_Spawn.png" id="5_0xlcn"]
+[ext_resource type="Texture2D" uid="uid://6q8ib5kq0m67" path="res://addons/Tiny Swords/UI/Banners/Banner_Horizontal.png" id="6_xiw6i"]
+[ext_resource type="Texture2D" uid="uid://cjefqww60da6y" path="res://addons/Tiny Swords/UI/Ribbons/Ribbon_Blue_3Slides.png" id="7_cnbu6"]
+[ext_resource type="Texture2D" uid="uid://byj4i70uaqva3" path="res://addons/Tiny Swords/UI/Ribbons/Ribbon_Red_3Slides.png" id="8_bat5u"]
+[ext_resource type="Texture2D" uid="uid://ceqbagujgbf5g" path="res://addons/Tiny Swords/UI/Ribbons/Ribbon_Yellow_3Slides.png" id="9_fckat"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="WarriorRed" type="Sprite2D" parent="."]
+position = Vector2(1624, -865)
+texture = ExtResource("1_gslci")
+
+[node name="PawnBlue" type="Sprite2D" parent="."]
+position = Vector2(90, -752)
+texture = ExtResource("2_8cepk")
+
+[node name="GSpawn" type="Sprite2D" parent="."]
+position = Vector2(-1051, -590)
+texture = ExtResource("3_0ieln")
+
+[node name="MSpawn" type="Sprite2D" parent="."]
+position = Vector2(-1061, -458)
+texture = ExtResource("4_x78yx")
+
+[node name="WSpawn" type="Sprite2D" parent="."]
+position = Vector2(-1019, -330)
+texture = ExtResource("5_0xlcn")
+
+[node name="BannerHorizontal" type="Sprite2D" parent="."]
+position = Vector2(-1365, -876)
+texture = ExtResource("6_xiw6i")
+
+[node name="RibbonBlue3Slides" type="Sprite2D" parent="."]
+position = Vector2(-1099, -1088)
+texture = ExtResource("7_cnbu6")
+
+[node name="RibbonRed3Slides" type="Sprite2D" parent="."]
+position = Vector2(-1095, -998)
+texture = ExtResource("8_bat5u")
+
+[node name="RibbonYellow3Slides" type="Sprite2D" parent="."]
+position = Vector2(-1095, -892)
+texture = ExtResource("9_fckat")
